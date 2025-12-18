@@ -356,3 +356,32 @@
     bindings = <&kp LG(LA(LC(LS(SEMI))))>;
     display-name = "Hyper+; (Linear)";
   };
+
+  // Window Management shortcuts (Cmd+Ctrl+Letter)
+  Win_H: Win_H {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&kp LG(LC(H))>;
+    display-name = "Win Left (⌘⌃H)";
+  };
+
+  Win_J: Win_J {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&kp LG(LC(J))>;
+    display-name = "Win Center (⌘⌃J)";
+  };
+
+  Win_K: Win_K {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&kp LG(LC(K))>;
+    display-name = "Win Maximize (⌘⌃K)";
+  };
+
+  Win_L: Win_L {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&kp LG(LC(L))>;
+    display-name = "Win Right (⌘⌃L)";
+  };
