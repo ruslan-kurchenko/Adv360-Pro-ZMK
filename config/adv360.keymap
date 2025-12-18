@@ -86,10 +86,10 @@
     app {
       display-name = "App";
       bindings = <
-        &trans &trans &trans &trans &trans &trans &trans                                                           &trans &trans &trans &Hyper_P &trans &trans &trans
-        &trans &trans &trans &trans &trans &Hyper_T &trans                                                         &trans &trans &trans &trans   &trans &Hyper_P &trans
-        &trans &trans &Hyper_S &Hyper_D &Hyper_F &trans &trans        &trans &trans &trans &trans                  &trans &trans &trans &trans   &trans &trans &trans
-        &trans &trans &trans &Hyper_C &trans &Hyper_B                              &trans &trans                          &Hyper_N &Hyper_M &trans &trans &trans &trans
+        &trans &trans &trans &trans &trans &trans &trans                                                           &trans &trans &trans &trans &trans &trans &trans
+        &trans &trans &Hyper_W &trans &trans &Hyper_T &trans                                                       &trans &trans &Hyper_U &Hyper_I &Hyper_O &Hyper_P &trans
+        &trans &Hyper_A &Hyper_S &trans &trans &Hyper_G &trans        &trans &trans &trans &trans                  &trans &Hyper_H &trans &Hyper_K &trans &Hyper_Semi &trans
+        &trans &trans &trans &trans &trans &Hyper_B                              &trans &trans                          &Hyper_N &Hyper_M &trans &trans &trans &trans
         &trans &trans &trans &trans &trans                      &trans &trans      &trans &trans &trans &trans                       &trans &trans &trans &trans &trans
       >;
     };

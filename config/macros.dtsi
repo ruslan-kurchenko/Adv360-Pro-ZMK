@@ -249,7 +249,7 @@
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
     bindings = <&kp LG(LA(LC(LS(P))))>;
-    display-name = "Hyper+P (Search)";
+    display-name = "Hyper+P (Perplexity)";
   };
 
   Hyper_B: Hyper_B {
@@ -270,14 +270,14 @@
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
     bindings = <&kp LG(LA(LC(LS(N))))>;
-    display-name = "Hyper+N (Notes)";
+    display-name = "Hyper+N (Notion)";
   };
 
   Hyper_M: Hyper_M {
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
     bindings = <&kp LG(LA(LC(LS(M))))>;
-    display-name = "Hyper+M (Mail)";
+    display-name = "Hyper+M (Meets)";
   };
 
   Hyper_F: Hyper_F {
@@ -292,4 +292,67 @@
     #binding-cells = <0>;
     bindings = <&kp LG(LA(LC(LS(D))))>;
     display-name = "Hyper+D (Calendar)";
+  };
+
+  Hyper_A: Hyper_A {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&kp LG(LA(LC(LS(A))))>;
+    display-name = "Hyper+A (Arc)";
+  };
+
+  Hyper_I: Hyper_I {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&kp LG(LA(LC(LS(I))))>;
+    display-name = "Hyper+I (IntelliJ)";
+  };
+
+  Hyper_K: Hyper_K {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&kp LG(LA(LC(LS(K))))>;
+    display-name = "Hyper+K (Kill)";
+  };
+
+  Hyper_W: Hyper_W {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&kp LG(LA(LC(LS(W))))>;
+    display-name = "Hyper+W (Postman)";
+  };
+
+  Hyper_O: Hyper_O {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&kp LG(LA(LC(LS(O))))>;
+    display-name = "Hyper+O (Obsidian)";
+  };
+
+  Hyper_H: Hyper_H {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&kp LG(LA(LC(LS(H))))>;
+    display-name = "Hyper+H (Clipboard)";
+  };
+
+  Hyper_U: Hyper_U {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&kp LG(LA(LC(LS(U))))>;
+    display-name = "Hyper+U (Translate)";
+  };
+
+  Hyper_G: Hyper_G {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&kp LG(LA(LC(LS(G))))>;
+    display-name = "Hyper+G (Google)";
+  };
+
+  Hyper_Semi: Hyper_Semi {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&kp LG(LA(LC(LS(SEMI))))>;
+    display-name = "Hyper+; (Linear)";
   };
