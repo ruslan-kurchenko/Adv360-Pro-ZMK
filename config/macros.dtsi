@@ -393,6 +393,42 @@
     display-name = "Win Right (⌘⌃L)";
   };
 
+  Win_H_Quarter: Win_H_Quarter {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&kp LG(LC(U))>;
+    display-name = "Win Left 1/4 (⌘⌃U)";
+  };
+
+  Win_L_Quarter: Win_L_Quarter {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&kp LG(LC(O))>;
+    display-name = "Win Right 1/4 (⌘⌃O)";
+  };
+
+  // Screenshot macros
+  Mac_Screenshot_Area: Mac_Screenshot_Area {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&kp LS(LG(N4))>;
+    display-name = "Screenshot Area (⇧⌘4)";
+  };
+
+  Mac_Screenshot_Full: Mac_Screenshot_Full {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&kp LS(LG(N3))>;
+    display-name = "Screenshot Full (⇧⌘3)";
+  };
+
+  Mac_Screenshot_Window: Mac_Screenshot_Window {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&kp LS(LG(N4)) &kp SPACE>;
+    display-name = "Screenshot Window (⇧⌘4 Space)";
+  };
+
   // Common action macros for combos
   Mac_Copy_Combo: Mac_Copy_Combo {
     compatible = "zmk,behavior-macro";
