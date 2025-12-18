@@ -48,6 +48,26 @@
           flavor = "tap-preferred";
           bindings = <&mo>, <&kp>;
       };
+
+      lt_caps: layer_tap_caps {
+          compatible = "zmk,behavior-hold-tap";
+          label = "LAYER_TAP_CAPS";
+          #binding-cells = <2>;
+          tapping-term-ms = <200>;
+          quick_tap_ms = <175>;
+          flavor = "tap-preferred";
+          bindings = <&mo>, <&caps_word>;
+      };
+
+      lt_rshft: layer_tap_rshift {
+          compatible = "zmk,behavior-hold-tap";
+          label = "LAYER_TAP_RSHIFT";
+          #binding-cells = <2>;
+          tapping-term-ms = <200>;
+          quick_tap_ms = <175>;
+          flavor = "tap-preferred";
+          bindings = <&mo>, <&kp>;
+      };
     };
 
   keymap {
@@ -59,8 +79,8 @@
         &kp EQUAL &kp N1    &kp N2   &kp N3   &kp N4     &kp N5 &tog 1                                                           &mo 3 &kp N6 &kp N7 &kp N8    &kp N9   &kp N0   &kp MINUS
         &kp TAB   &kp Q     &kp W    &kp E    &kp R      &kp T  &none                                                            &none &kp Y  &kp U  &kp I     &kp O    &kp P    &kp BSLH
         &kp ESC   &kp A     &kp S    &kp D    &kp F      &kp G  &none           &kp LCTRL &kp LALT &kp LGUI  &kp RCTRL           &none &kp H  &kp J  &kp K     &kp L    &kp SEMI &kp SQT
-        &kp LSHFT &kp Z     &kp X    &kp C    &kp V      &kp B                            &kp HOME &kp PG_UP                           &kp N  &kp M  &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
-        &mo 2     &kp GRAVE &kp CAPS &kp LEFT &kp RIGHT                &kp BSPC &td_opt   &kp END  &lt_pgdn 5 PG_DN &kp ENTER &lt_spc 4 SPACE        &kp UP &kp DOWN  &kp LBKT &kp RBKT &mo 2
+        &kp LSHFT &kp Z     &kp X    &kp C    &kp V      &kp B                            &kp HOME &kp PG_UP                           &kp N  &kp M  &kp COMMA &kp DOT  &kp FSLH &lt_rshft 7 RSHFT
+        &mo 2     &kp GRAVE &lt_caps 6 0 &kp LEFT &kp RIGHT                &kp BSPC &td_opt   &kp END  &lt_pgdn 5 PG_DN &kp ENTER &lt_spc 4 SPACE        &kp UP &kp DOWN  &kp LBKT &kp RBKT &mo 2
       >;
     };
     keypad {
@@ -69,8 +89,8 @@
         &kp EQUAL &kp N1    &kp N2   &kp N3   &kp N4     &kp N5 &trans                                                           &mo 3 &kp N6 &kp KP_NUM &kp KP_EQUAL &kp KP_DIVIDE &kp KP_MULTIPLY &kp MINUS
         &kp TAB   &kp Q     &kp W    &kp E    &kp R      &kp T  &none                                                            &none &kp Y  &kp KP_N7  &kp KP_N8    &kp KP_N9     &kp KP_MINUS    &kp BSLH
         &kp ESC   &kp A     &kp S    &kp D    &kp F      &kp G  &none           &kp LCTRL &kp LALT &kp LGUI  &kp RCTRL           &none &kp H  &kp KP_N4  &kp KP_N5    &kp KP_N6     &kp KP_PLUS     &kp SQT
-        &kp LSHFT &kp Z     &kp X    &kp C    &kp V      &kp B                            &kp HOME &kp PG_UP                           &kp N  &kp KP_N1  &kp KP_N2    &kp KP_N3     &kp KP_ENTER    &kp RSHFT
-        &mo 2     &kp GRAVE &kp CAPS &kp LEFT &kp RIGHT                &kp BSPC &td_opt   &kp END  &lt_pgdn 5 PG_DN &kp ENTER &lt_spc 4 KP_N0        &kp UP     &kp DOWN     &kp KP_DOT    &kp RBKT        &mo 2
+        &kp LSHFT &kp Z     &kp X    &kp C    &kp V      &kp B                            &kp HOME &kp PG_UP                           &kp N  &kp KP_N1  &kp KP_N2    &kp KP_N3     &kp KP_ENTER    &lt_rshft 7 RSHFT
+        &mo 2     &kp GRAVE &lt_caps 6 0 &kp LEFT &kp RIGHT                &kp BSPC &td_opt   &kp END  &lt_pgdn 5 PG_DN &kp ENTER &lt_spc 4 KP_N0        &kp UP     &kp DOWN     &kp KP_DOT    &kp RBKT        &mo 2
       >;
     };
     fn {
@@ -98,7 +118,7 @@
       bindings = <
         &trans &trans &trans &trans &trans &trans &trans                                                           &trans &trans &trans &trans &trans &trans &trans
         &trans &trans &Hyper_W &trans &trans &Hyper_T &trans                                                       &trans &trans &Hyper_U &Hyper_I &Hyper_O &Hyper_P &trans
-        &trans &Hyper_A &Hyper_S &trans &trans &Hyper_G &trans        &trans &trans &trans &trans                  &trans &Hyper_H &trans &Hyper_K &trans &Hyper_Semi &trans
+        &trans &Hyper_A &Hyper_S &trans &trans &Hyper_G &trans        &trans &trans &trans &trans                  &trans &Hyper_H &trans &Hyper_K &Hyper_L &Hyper_Semi &trans
         &trans &trans &trans &trans &trans &Hyper_B                              &trans &trans                          &Hyper_N &Hyper_M &trans &trans &trans &trans
         &trans &trans &trans &trans &trans                      &trans &trans      &trans &trans &trans &trans                       &trans &trans &trans &trans &trans
       >;
@@ -115,14 +135,87 @@
       >;
     };
 
-    extra3 { 
-      display-name = "Cyan";    
-      status = "reserved";
+    nav {
+      display-name = "Nav";
+      bindings = <
+        &trans &trans &trans &trans &trans &trans &trans                                                           &trans &trans &trans &trans &trans &trans &trans
+        &trans &trans &Nav_Word_Left &trans &Nav_Word_Right &trans &trans                                          &trans &trans &kp PG_UP &trans &trans &trans &trans
+        &trans &Nav_Line_Start &trans &trans &trans &Nav_Line_End &trans  &trans &trans &trans &trans              &trans &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
+        &trans &trans &trans &trans &trans &trans                              &trans &trans                              &trans &kp PG_DN &trans &trans &trans &trans
+        &trans &trans &trans &trans &trans                      &trans &trans      &trans &trans &trans &trans                       &trans &trans &trans &trans &trans
+      >;
     };
 
-    extra4 { 
-      display-name = "Yellow";    
-      status = "reserved";
+    symbol {
+      display-name = "Sym";
+      bindings = <
+        &kp GRAVE &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT &trans                                                &trans &kp CARET &kp AMPS &kp STAR &kp UNDER &kp PLUS &kp TILDE
+        &trans &kp LBKT &kp RBKT &kp LT &kp GT &trans &trans                                                        &trans &trans &kp LPAR &kp RPAR &kp LBRC &kp RBRC &kp PIPE
+        &trans &kp MINUS &kp EQUAL &kp UNDER &kp PLUS &kp BSLH &trans  &trans &trans &trans &trans                  &trans &trans &trans &trans &trans &kp COLON &kp DQT
+        &trans &trans &trans &trans &trans &trans                              &trans &trans                              &trans &trans &trans &trans &trans &trans
+        &trans &trans &trans &trans &trans                      &trans &trans      &trans &trans &trans &trans                       &trans &trans &trans &trans &trans
+      >;
+    };
+  };
+
+  combos {
+    compatible = "zmk,combos";
+
+    // Editing combos (home row right hand)
+    combo_copy {
+      timeout-ms = <50>;
+      key-positions = <40 41>; // J + K
+      bindings = <&Mac_Copy_Combo>;
+    };
+
+    combo_paste {
+      timeout-ms = <50>;
+      key-positions = <41 42>; // K + L
+      bindings = <&Mac_Paste_Combo>;
+    };
+
+    combo_cut {
+      timeout-ms = <50>;
+      key-positions = <40 42>; // J + L
+      bindings = <&Mac_Cut_Combo>;
+    };
+
+    // Editing combos (home row left hand)
+    combo_undo {
+      timeout-ms = <50>;
+      key-positions = <29 30>; // S + D
+      bindings = <&Mac_Undo_Combo>;
+    };
+
+    combo_redo {
+      timeout-ms = <50>;
+      key-positions = <30 31>; // D + F
+      bindings = <&Mac_Redo_Combo>;
+    };
+
+    combo_save {
+      timeout-ms = <50>;
+      key-positions = <31 32>; // F + G
+      bindings = <&Mac_Save_Combo>;
+    };
+
+    // Tab management combos (top row)
+    combo_new_tab {
+      timeout-ms = <50>;
+      key-positions = <15 16>; // W + E
+      bindings = <&Mac_New_Tab>;
+    };
+
+    combo_close_tab {
+      timeout-ms = <50>;
+      key-positions = <16 17>; // E + R
+      bindings = <&Mac_Close_Tab>;
+    };
+
+    combo_reopen_tab {
+      timeout-ms = <50>;
+      key-positions = <14 15>; // Q + W
+      bindings = <&Mac_Reopen_Tab>;
     };
   };
 };

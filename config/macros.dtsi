@@ -350,11 +350,18 @@
     display-name = "Hyper+G (Google)";
   };
 
+  Hyper_L: Hyper_L {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&kp LG(LA(LC(LS(L))))>;
+    display-name = "Hyper+L (Linear)";
+  };
+
   Hyper_Semi: Hyper_Semi {
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
     bindings = <&kp LG(LA(LC(LS(SEMI))))>;
-    display-name = "Hyper+; (Linear)";
+    display-name = "Hyper+; (My Linear Issues)";
   };
 
   // Window Management shortcuts (Cmd+Ctrl+Letter)
@@ -384,4 +391,97 @@
     #binding-cells = <0>;
     bindings = <&kp LG(LC(L))>;
     display-name = "Win Right (⌘⌃L)";
+  };
+
+  // Common action macros for combos
+  Mac_Copy_Combo: Mac_Copy_Combo {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&kp LG(C)>;
+    display-name = "Copy (⌘C)";
+  };
+
+  Mac_Paste_Combo: Mac_Paste_Combo {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&kp LG(V)>;
+    display-name = "Paste (⌘V)";
+  };
+
+  Mac_Cut_Combo: Mac_Cut_Combo {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&kp LG(X)>;
+    display-name = "Cut (⌘X)";
+  };
+
+  Mac_Undo_Combo: Mac_Undo_Combo {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&kp LG(Z)>;
+    display-name = "Undo (⌘Z)";
+  };
+
+  Mac_Redo_Combo: Mac_Redo_Combo {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&kp LG(LS(Z))>;
+    display-name = "Redo (⌘⇧Z)";
+  };
+
+  Mac_Save_Combo: Mac_Save_Combo {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&kp LG(S)>;
+    display-name = "Save (⌘S)";
+  };
+
+  Mac_New_Tab: Mac_New_Tab {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&kp LG(T)>;
+    display-name = "New Tab (⌘T)";
+  };
+
+  Mac_Close_Tab: Mac_Close_Tab {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&kp LG(W)>;
+    display-name = "Close Tab (⌘W)";
+  };
+
+  Mac_Reopen_Tab: Mac_Reopen_Tab {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&kp LG(LS(T))>;
+    display-name = "Reopen Tab (⌘⇧T)";
+  };
+
+  // Navigation macros
+  Nav_Word_Left: Nav_Word_Left {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&kp LA(LEFT)>;
+    display-name = "Word Left (⌥←)";
+  };
+
+  Nav_Word_Right: Nav_Word_Right {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&kp LA(RIGHT)>;
+    display-name = "Word Right (⌥→)";
+  };
+
+  Nav_Line_Start: Nav_Line_Start {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&kp LG(LEFT)>;
+    display-name = "Line Start (⌘←)";
+  };
+
+  Nav_Line_End: Nav_Line_End {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&kp LG(RIGHT)>;
+    display-name = "Line End (⌘→)";
   };
