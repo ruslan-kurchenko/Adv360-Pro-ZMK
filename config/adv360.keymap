@@ -20,6 +20,24 @@
           flavor = "tap-preferred";
           bindings = <&kp>, <&kp>;
       };
+
+      td_opt: tap_dance_option {
+          compatible = "zmk,behavior-tap-dance";
+          label = "TAP_DANCE_OPTION";
+          #binding-cells = <0>;
+          tapping-term-ms = <200>;
+          bindings = <&kp LALT>, <&Mac_Opt_Space>;
+      };
+
+      lt_spc: layer_tap_space {
+          compatible = "zmk,behavior-hold-tap";
+          label = "LAYER_TAP_SPACE";
+          #binding-cells = <2>;
+          tapping-term-ms = <200>;
+          quick_tap_ms = <175>;
+          flavor = "tap-preferred";
+          bindings = <&mo>, <&kp>;
+      };
     };
 
   keymap {
@@ -32,7 +50,7 @@
         &kp TAB   &kp Q     &kp W    &kp E    &kp R      &kp T  &none                                                            &none &kp Y  &kp U  &kp I     &kp O    &kp P    &kp BSLH
         &kp ESC   &kp A     &kp S    &kp D    &kp F      &kp G  &none           &kp LCTRL &kp LALT &kp LGUI  &kp RCTRL           &none &kp H  &kp J  &kp K     &kp L    &kp SEMI &kp SQT
         &kp LSHFT &kp Z     &kp X    &kp C    &kp V      &kp B                            &kp HOME &kp PG_UP                           &kp N  &kp M  &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
-        &mo 2     &kp GRAVE &kp CAPS &kp LEFT &kp RIGHT                &kp BSPC &kp DEL   &kp END  &kp PG_DN &kp ENTER &kp SPACE              &kp UP &kp DOWN  &kp LBKT &kp RBKT &mo 2
+        &mo 2     &kp GRAVE &kp CAPS &kp LEFT &kp RIGHT                &kp BSPC &td_opt   &kp END  &kp PG_DN &kp ENTER &lt_spc 4 SPACE        &kp UP &kp DOWN  &kp LBKT &kp RBKT &mo 2
       >;
     };
     keypad {
@@ -42,7 +60,7 @@
         &kp TAB   &kp Q     &kp W    &kp E    &kp R      &kp T  &none                                                            &none &kp Y  &kp KP_N7  &kp KP_N8    &kp KP_N9     &kp KP_MINUS    &kp BSLH
         &kp ESC   &kp A     &kp S    &kp D    &kp F      &kp G  &none           &kp LCTRL &kp LALT &kp LGUI  &kp RCTRL           &none &kp H  &kp KP_N4  &kp KP_N5    &kp KP_N6     &kp KP_PLUS     &kp SQT
         &kp LSHFT &kp Z     &kp X    &kp C    &kp V      &kp B                            &kp HOME &kp PG_UP                           &kp N  &kp KP_N1  &kp KP_N2    &kp KP_N3     &kp KP_ENTER    &kp RSHFT
-        &mo 2     &kp GRAVE &kp CAPS &kp LEFT &kp RIGHT                &kp BSPC &kp DEL   &kp END  &kp PG_DN &kp ENTER &kp KP_N0              &kp UP     &kp DOWN     &kp KP_DOT    &kp RBKT        &mo 2
+        &mo 2     &kp GRAVE &kp CAPS &kp LEFT &kp RIGHT                &kp BSPC &td_opt   &kp END  &kp PG_DN &kp ENTER &lt_spc 4 KP_N0        &kp UP     &kp DOWN     &kp KP_DOT    &kp RBKT        &mo 2
       >;
     };
     fn {
@@ -65,9 +83,15 @@
         &none &none        &none        &none        &none                                       &none &none &none &none      &bl BL_TOG &rgb_ug RGB_TOG                                     &bl BL_INC   &bl BL_DEC   &none &none &none
       >;
     };
-    extra1 { 
-      display-name = "Red";    
-      status = "reserved";
+    app {
+      display-name = "App";
+      bindings = <
+        &trans &trans &trans &trans &trans &trans &trans                                                           &trans &trans &trans &Hyper_P &trans &trans &trans
+        &trans &trans &trans &trans &trans &Hyper_T &trans                                                         &trans &trans &trans &trans   &trans &Hyper_P &trans
+        &trans &trans &Hyper_S &Hyper_D &Hyper_F &trans &trans        &trans &trans &trans &trans                  &trans &trans &trans &trans   &trans &trans &trans
+        &trans &trans &trans &Hyper_C &trans &Hyper_B                              &trans &trans                          &Hyper_N &Hyper_M &trans &trans &trans &trans
+        &trans &trans &trans &trans &trans                      &trans &trans      &trans &trans &trans &trans                       &trans &trans &trans &trans &trans
+      >;
     };
 
     extra2 { 

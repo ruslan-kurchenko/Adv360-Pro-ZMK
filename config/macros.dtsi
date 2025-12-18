@@ -222,3 +222,74 @@
     bindings = <&mkp MB1 &mkp MB1>;
     display-name = "Double Click";
   };
+
+  Mac_Opt_Space: Mac_Opt_Space {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&kp LA(SPACE)>;
+    display-name = "Mac Option+Space";
+  };
+
+  // Hyper key app launchers (Cmd+Opt+Ctrl+Shift+Letter)
+  Hyper_T: Hyper_T {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&kp LG(LA(LC(LS(T))))>;
+    display-name = "Hyper+T (Terminal)";
+  };
+
+  Hyper_C: Hyper_C {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&kp LG(LA(LC(LS(C))))>;
+    display-name = "Hyper+C (Cursor)";
+  };
+
+  Hyper_P: Hyper_P {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&kp LG(LA(LC(LS(P))))>;
+    display-name = "Hyper+P (Search)";
+  };
+
+  Hyper_B: Hyper_B {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&kp LG(LA(LC(LS(B))))>;
+    display-name = "Hyper+B (Browser)";
+  };
+
+  Hyper_S: Hyper_S {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&kp LG(LA(LC(LS(S))))>;
+    display-name = "Hyper+S (Slack)";
+  };
+
+  Hyper_N: Hyper_N {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&kp LG(LA(LC(LS(N))))>;
+    display-name = "Hyper+N (Notes)";
+  };
+
+  Hyper_M: Hyper_M {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&kp LG(LA(LC(LS(M))))>;
+    display-name = "Hyper+M (Mail)";
+  };
+
+  Hyper_F: Hyper_F {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&kp LG(LA(LC(LS(F))))>;
+    display-name = "Hyper+F (Finder)";
+  };
+
+  Hyper_D: Hyper_D {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&kp LG(LA(LC(LS(D))))>;
+    display-name = "Hyper+D (Calendar)";
+  };
