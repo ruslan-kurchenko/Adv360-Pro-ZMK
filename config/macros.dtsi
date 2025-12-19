@@ -429,6 +429,13 @@
     display-name = "Screenshot Window (⇧⌘4 Space)";
   };
 
+  Mac_Flycut: Mac_Flycut {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&kp LS(LG(V))>;
+    display-name = "Flycut History (⇧⌘V)";
+  };
+
   // Common action macros for combos
   Mac_Copy_Combo: Mac_Copy_Combo {
     compatible = "zmk,behavior-macro";
