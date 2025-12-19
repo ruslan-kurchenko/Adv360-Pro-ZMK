@@ -57,7 +57,8 @@ This custom configuration transforms the Advantage 360 Pro into a productivity p
 |----------|--------|-------|
 | **Screenshot** | Tap HOME | Area selection (⇧⌘4) |
 | **Language Switch** | Tap END | Switches input language |
-| **Caps Word** | Tap LSHIFT | One word capitalize |
+| **Caps Word** | Tap CAPS | One word capitalize |
+| **Caps Lock** | Double-tap CAPS | Sticky caps (all keys) |
 | **Copy** | Hold ` + C | Edit layer |
 | **Paste** | Hold ` + V | Edit layer |
 | **Flycut History** | Hold ` + B | Clipboard cycling |
@@ -78,7 +79,6 @@ This custom configuration transforms the Advantage 360 Pro into a productivity p
 | **HOME** | Screenshot (⇧⌘4) | - | → Media Layer (8) |
 | **END** | Language Switch (⌃Space) | - | - |
 | **GRAVE** (`) | Backtick | - | → Edit Layer (9) |
-| **LSHIFT** | Caps Word | - | Shift Modifier |
 | **SPACE** | Space | - | → App Layer (4) |
 | **PG_DN** | Page Down | - | → Window Layer (5) |
 | **CAPS** | Caps Word | Caps Lock | → Nav Layer (6) |
@@ -123,7 +123,6 @@ This custom configuration transforms the Advantage 360 Pro into a productivity p
 - Homerow mods on ASDF/JKL; (hold for modifiers)
 - Layer access keys in thumb cluster
 - END key = Language switch (⌃Space)
-- **Left Shift:** Tap = Caps Word, Hold = Shift modifier
 
 **Thumb Cluster Layout:**
 
@@ -316,8 +315,14 @@ Set up window management shortcuts in Raycast:
 
 **CAPS Key Multi-Function:**
 - **Single Tap** = Caps Word (capitalize one word, auto-off)
-- **Double Tap** = Caps Lock (sticky caps, stays on)
-- **Hold** = Nav Layer (vim navigation)
+- **Double Tap** (within 200ms) = Caps Lock (sticky caps, stays on)
+- **Hold** (> 200ms) = Nav Layer (vim navigation)
+
+**Caps Word Usage:**
+Tap CAPS, then type a word - it will be capitalized and automatically return to lowercase after the word ends. Perfect for typing constants like API_KEY.
+
+**Caps Lock Usage:**
+Double-tap CAPS quickly (within 200ms) to enable sticky caps lock. All subsequent letters will be capitalized until you tap CAPS again to turn it off.
 
 **Navigation Layout:**
 
@@ -704,7 +709,6 @@ make
 
 ### Special Features
 ✅ Edit layer with Flycut clipboard history (GRAVE hold)
-✅ Left Shift tap for caps_word (one-word capitalize)
 ✅ CAPS triple function (single=caps word, double=caps lock, hold=nav)
 ✅ Layer-tap behaviors (tap vs hold)
 ✅ Single-key language switch (END key)
