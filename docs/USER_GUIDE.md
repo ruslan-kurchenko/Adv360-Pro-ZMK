@@ -79,6 +79,7 @@ This custom configuration transforms the Advantage 360 Pro into a productivity p
 | **HOME** | Screenshot (⇧⌘4) | - | → Media Layer (8) |
 | **END** | End key | Language Switch (⌃Space) | → Edit Layer (9) |
 | **GRAVE** (`) | Backtick | - | - |
+| **OPT** (Delete key) | Alt/Option | - | Super/Command (⌘/❖) |
 | **SPACE** | Space | - | → App Layer (4) |
 | **PG_DN** | Page Down | - | → Window Layer (5) |
 | **CAPS** | Caps Word | Caps Lock | → Nav Layer (6) |
@@ -127,9 +128,9 @@ This custom configuration transforms the Advantage 360 Pro into a productivity p
 **Thumb Cluster Layout:**
 
 ```
-Left:  Fn  |  `  | CAPS↓Nav | ←  | →  | Bksp | Opt
-Right: END↓Edit | PG_DN↓Win | Enter | SPACE↓App | ↑ | ↓ | [ | ] | Fn
-       (2x=🌐)   (Window)            (Apps)
+Left:  Fn  |  `  | CAPS↓Nav | ←  | →  | Bksp | Alt↓Super | END↓Edit
+Right: PG_DN↓Win | Enter | SPACE↓App | ↑ | ↓ | [ | ] | Fn
+       (Window)            (Apps)
 ```
 
 **Key Features:**
