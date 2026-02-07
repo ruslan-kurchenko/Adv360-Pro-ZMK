@@ -56,13 +56,13 @@ This custom configuration transforms the Advantage 360 Pro into a productivity p
 | Function | Action | Notes |
 |----------|--------|-------|
 | **Screenshot** | Tap HOME | Area selection (⇧⌘4) |
-| **Language Switch** | Tap END | Switches input language |
+| **Language Switch** | Double-tap END | Switches input language |
 | **Caps Word** | Tap CAPS | One word capitalize |
 | **Caps Lock** | Double-tap CAPS | Sticky caps (all keys) |
-| **Copy** | Hold ` + C | Edit layer |
-| **Paste** | Hold ` + V | Edit layer |
-| **Flycut History** | Hold ` + B | Clipboard cycling |
-| **Undo** | Hold ` + Z | Edit layer |
+| **Copy** | Hold END + C | Edit layer |
+| **Paste** | Hold END + V | Edit layer |
+| **Flycut History** | Hold END + B | Clipboard cycling |
+| **Undo** | Hold END + Z | Edit layer |
 | **Window Left Half** | Hold PG_DN, tap H | Cycles: half → 1/4 → 3/4 |
 | **Window Right Half** | Hold PG_DN, tap L | Cycles: half → 1/4 → 3/4 |
 | **Window Left 1/4** | lHold PG_DN, tap U | Direct 1/4 sizing |
@@ -77,8 +77,8 @@ This custom configuration transforms the Advantage 360 Pro into a productivity p
 | Key | Tap Behavior | Double-Tap | Hold Behavior |
 |-----|--------------|------------|---------------|
 | **HOME** | Screenshot (⇧⌘4) | - | → Media Layer (8) |
-| **END** | Language Switch (⌃Space) | - | - |
-| **GRAVE** (`) | Backtick | - | → Edit Layer (9) |
+| **END** | End key | Language Switch (⌃Space) | → Edit Layer (9) |
+| **GRAVE** (`) | Backtick | - | - |
 | **SPACE** | Space | - | → App Layer (4) |
 | **PG_DN** | Page Down | - | → Window Layer (5) |
 | **CAPS** | Caps Word | Caps Lock | → Nav Layer (6) |
@@ -122,14 +122,14 @@ This custom configuration transforms the Advantage 360 Pro into a productivity p
 - Standard QWERTY layout
 - Homerow mods on ASDF/JKL; (hold for modifiers)
 - Layer access keys in thumb cluster
-- END key = Language switch (⌃Space)
+- END key: tap = End, double-tap = Language switch (⌃Space), hold = Edit layer
 
 **Thumb Cluster Layout:**
 
 ```
 Left:  Fn  |  `  | CAPS↓Nav | ←  | →  | Bksp | Opt
-Right: 🌐Lang | PG_DN↓Win | Enter | SPACE↓App | ↑ | ↓ | [ | ] | Fn
-       (END)    (Window)            (Apps)
+Right: END↓Edit | PG_DN↓Win | Enter | SPACE↓App | ↑ | ↓ | [ | ] | Fn
+       (2x=🌐)   (Window)            (Apps)
 ```
 
 **Key Features:**
@@ -430,7 +430,7 @@ Right Hand (Controls):
 
 **Display Name:** Edit
 
-**Activation:** Hold GRAVE (`) (LT_GRAVE 9 GRAVE), Tap GRAVE = `
+**Activation:** Hold END key (LT_END 9 0), Tap END = End key, Double-tap END = Language switch
 
 **Edit Layout:**
 
@@ -461,10 +461,10 @@ Left Hand Editing:
 
 **Workflow Example:**
 1. Select text (normal selection or use Nav layer)
-2. Hold GRAVE + C = Copy
+2. Hold END + C = Copy
 3. Navigate to destination
-4. Hold GRAVE + V = Paste
-5. Need older clipboard? Hold GRAVE + B = Cycle Flycut history
+4. Hold END + V = Paste
+5. Need older clipboard? Hold END + B = Cycle Flycut history
 
 **Why This Layer:**
 - Reliable (no timing issues like combos)
@@ -473,7 +473,7 @@ Left Hand Editing:
 - Complete editing suite in one place
 - Flycut integration for power clipboard workflows
 
-**Tip:** This replaces the unreliable combo system - use Edit layer instead!
+**Tip:** This replaces the unreliable combo system - use Edit layer (hold END) instead!
 
 ---
 
@@ -708,10 +708,10 @@ make
 ✅ Layer 9: Edit (complete editing suite with Flycut)
 
 ### Special Features
-✅ Edit layer with Flycut clipboard history (GRAVE hold)
+✅ Edit layer with Flycut clipboard history (END hold)
 ✅ CAPS triple function (single=caps word, double=caps lock, hold=nav)
+✅ END triple function (single=End, double=lang switch, hold=Edit layer)
 ✅ Layer-tap behaviors (tap vs hold)
-✅ Single-key language switch (END key)
 ✅ Single-key screenshot (HOME tap)
 ✅ Zellij Alt navigation (no mode switching)
 ✅ 9 home row combos (legacy, Edit layer recommended)
